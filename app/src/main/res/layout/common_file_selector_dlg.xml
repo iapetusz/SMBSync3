@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_file_selector_dlg_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/common_file_selector_dlg_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/common_file_selector_dlg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/common_file_selector_dlg_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/common_file_selector_storage_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.sentaroh.android.SMBSync3.NonWordwrapTextView
+        android:id="@+id/common_file_selector_filepath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/common_file_selector_top_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Top" />
+        <Button android:id="@+id/common_file_selector_up_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Up" />
+        <Button android:id="@+id/common_file_selector_refresh_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refresh" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/common_file_selector_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <TextView android:id="@+id/common_file_selector_empty" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Empty" android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/common_file_selector_dir_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <EditText android:id="@+id/common_file_selector_dir_name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <Button android:id="@+id/common_file_selector_create_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Create" />
+        <Button android:id="@+id/common_file_selector_btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel" />
+        <Button android:id="@+id/common_file_selector_btn_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/ok" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@+id/context_button_add" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_copy" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_delete" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_rename" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_select_all" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_unselect_all" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_activate" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_inactivate" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_share" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_copy_to_clipboard" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_pinned" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_move_to_top" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <ImageButton android:id="@+id/context_button_move_to_bottom" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+
+    <LinearLayout android:id="@+id/context_button_add_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_copy_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_delete_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_rename_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_select_all_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_unselect_all_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_activate_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_inactivate_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_share_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_copy_to_clipboard_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_pinned_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_move_to_top_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+    <LinearLayout android:id="@+id/context_button_move_to_bottom_view" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+</merge>
