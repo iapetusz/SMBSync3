@@ -2722,7 +2722,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_edit_sync_folder_dlg_zip_comp_level_title));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_task_edit_sync_folder_dlg_zip_comp_level_fastest));
@@ -2744,7 +2744,7 @@ public class TaskEditor extends DialogFragment {
         CommonUtilities.setSpinnerBackground(mActivity, spinner, mGp.isScreenThemeIsLight());
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_edit_sync_folder_dlg_zip_encrypt_select_msg));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_task_edit_sync_folder_dlg_zip_encrypt_none));
@@ -2836,7 +2836,7 @@ public class TaskEditor extends DialogFragment {
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
         mGp.safMgr.refreshSafList();
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_edit_sync_folder_dlg_smb_protocol_select_title));
         spinner.setAdapter(adapter);
 
@@ -2853,7 +2853,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_sync_task_sync_option_error_prompt));
         spinner.setAdapter(adapter);
 
@@ -2877,7 +2877,7 @@ public class TaskEditor extends DialogFragment {
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
         mGp.safMgr.refreshSafList();
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_main_sync_profile_dlg_sync_folder_type_prompt));
         spinner.setAdapter(adapter);
         int sel = 0;
@@ -2929,7 +2929,7 @@ public class TaskEditor extends DialogFragment {
 //        adapterSyncOption.setDropDownTextWordwrapEnabled(true);
 //        adapterSyncOption.setDebug(true);
         adapterSyncOption.setSpinner(spinnerSyncOption);
-        adapterSyncOption.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapterSyncOption.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinnerSyncOption.setPrompt(mActivity.getString(R.string.msgs_main_sync_profile_dlg_syncopt_prompt));
         spinnerSyncOption.setAdapter(adapterSyncOption);
         adapterSyncOption.add(mActivity.getString(R.string.msgs_main_sync_profile_dlg_mirror));
@@ -2955,7 +2955,7 @@ public class TaskEditor extends DialogFragment {
 //        adapter.setDropDownTextWordwrapEnabled(true);
 //        adapter.setDebug(true, "SpinnerTwoWaySyncConflictRule");
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_twoway_sync_conflict_copy_rurle_prompt));
         adapter.add(mActivity.getString(R.string.msgs_task_twoway_sync_conflict_copy_rurle_ask_user));
         adapter.add(mActivity.getString(R.string.msgs_task_twoway_sync_conflict_copy_rurle_copy_newer));
@@ -2974,7 +2974,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_sync_task_sync_file_size_filter_dialog_title));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_task_sync_task_sync_file_size_filter_type_none));
@@ -2996,7 +2996,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_sync_task_sync_file_size_unit_dialog_title));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_task_sync_task_sync_file_size_unit_byte));
@@ -3020,7 +3020,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_sync_task_sync_file_date_filter_dialog_title));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_task_sync_task_sync_file_date_type_none));
@@ -3044,7 +3044,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_main_sync_profile_dlg_wifi_option_prompt));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_main_sync_profile_dlg_wifi_option_wifi_off));
@@ -3073,7 +3073,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_main_sync_profile_dlg_diff_time_value_option_prompt));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_main_sync_profile_dlg_diff_time_value_option_1));
@@ -3094,7 +3094,7 @@ public class TaskEditor extends DialogFragment {
         CommonUtilities.setSpinnerBackground(mActivity, spinner, mGp.isScreenThemeIsLight());
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_task_sync_task_sync_option_offset_of_dst_time_value_title));
         spinner.setAdapter(adapter);
         for(int i=10;i<121;i+=10) adapter.add(String.valueOf(i));
@@ -4390,7 +4390,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_sync_folder_archive_suffix_seq_digit_prompt_title));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_sync_folder_archive_suffix_seq_digit_0));
@@ -4416,7 +4416,7 @@ public class TaskEditor extends DialogFragment {
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
 //        adapter.setDropDownTextWordwrapEnabled(true);
         adapter.setSpinner(spinner);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_sync_folder_archive_period_prompt_title));
         spinner.setAdapter(adapter);
         adapter.add(mActivity.getString(R.string.msgs_sync_folder_archive_period_0_days));

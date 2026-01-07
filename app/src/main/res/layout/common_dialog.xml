@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone" />
-    <com.sentaroh.android.SMBSync3.NonWordwrapTextView
+    <com.sentaroh.android.Utilities3.Widget.NonWordwrapTextView
         android:id="@+id/common_dialog_custom_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

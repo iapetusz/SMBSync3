@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.sentaroh.android.SMBSync3.NonWordwrapTextView
+    <com.sentaroh.android.Utilities3.Widget.NonWordwrapTextView
         android:id="@+id/common_file_selector_filepath"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -54,9 +54,30 @@
         android:id="@+id/common_file_selector_dir_name_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:visibility="gone">
+        <TextView
+            android:id="@+id/common_file_selector_hdr_dir_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Directory name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
         <EditText android:id="@+id/common_file_selector_dir_name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/common_file_selector_file_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/common_file_selector_hdr_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <EditText android:id="@+id/common_file_selector_file_name" android:layout_width="match_parent" android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout

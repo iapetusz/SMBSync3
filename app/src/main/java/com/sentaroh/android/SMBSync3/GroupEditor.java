@@ -356,8 +356,9 @@ public class GroupEditor {
     private void setSpinnerAssignedButton(GlobalParameters gp, Spinner spinner, GroupListAdapter.GroupListItem curr_item, int button_id) {
         CommonUtilities.setSpinnerBackground(mActivity, spinner, mGp.isScreenThemeIsLight());
         final CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(mActivity, android.R.layout.simple_spinner_item);
+        adapter.setSpinner(spinner);
 
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_single_choice);
         spinner.setPrompt(mActivity.getString(R.string.msgs_group_select_button_title));
         spinner.setAdapter(adapter);
 

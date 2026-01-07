@@ -82,7 +82,7 @@ public class LocalStorageSelectorAdapter extends ArrayAdapter<LocalStorageSelect
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         if(convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(mActivity);
-            convertView = inflater.inflate(R.layout.spinner_dropdown_single_choice, null);
+            convertView = inflater.inflate(R.layout.spinner_dropdown_single_choice, parent, false);
         }
         LocalStorageSelectorItem ls_item=getItem(position);
         String text = ls_item.description+" ("+ls_item.root_path+")";
@@ -104,7 +104,7 @@ public class LocalStorageSelectorAdapter extends ArrayAdapter<LocalStorageSelect
         text_view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
-                text_view.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                text_view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 setMultilineEllipsize(text_view, 3, TextUtils.TruncateAt.MIDDLE);
             }
         });
@@ -117,11 +117,13 @@ public class LocalStorageSelectorAdapter extends ArrayAdapter<LocalStorageSelect
             return;
         }
         float avail = 0.0f;
-        for (int i = 0; i < maxLines; i++) {
-            avail += view.getLayout().getLineMax(i);
+        if (view.getLayout()!=null) {
+            for (int i = 0; i < maxLines; i++) {
+                avail += view.getLayout().getLineMax(i);
+            }
+            CharSequence ellipsizedText = TextUtils.ellipsize(view.getText(), view.getPaint(), avail, where);
+            view.setText(ellipsizedText);
         }
-        CharSequence ellipsizedText = TextUtils.ellipsize(view.getText(), view.getPaint(), avail, where);
-        view.setText(ellipsizedText);
     }
 
 
@@ -132,4 +134,3 @@ public class LocalStorageSelectorAdapter extends ArrayAdapter<LocalStorageSelect
         public boolean mounted =false;
     }
 }
-
