@@ -369,6 +369,11 @@ public class SyncThreadCopyFile {
 
         long read_begin_time = System.currentTimeMillis();
 
+        // Speed tracking variables
+        long last_update_time = System.currentTimeMillis();
+        long last_update_bytes = 0;
+        long speed_update_interval = 1000; // Update speed every 1 second
+
         int io_area_size=SYNC_IO_BUFFER_SIZE;
         boolean show_prog = (file_size > SHOW_PROGRESS_THRESHOLD_VALUE);
         if (sti.isSyncOptionUseSmallIoBuffer() && sti.getDestinationFolderType().equals(SyncTaskItem.SYNC_FOLDER_TYPE_SMB)) {
@@ -383,9 +388,24 @@ public class SyncThreadCopyFile {
             ofs.write(buffer, 0, buffer_read_bytes);
             file_read_bytes += buffer_read_bytes;
             if (show_prog && file_size > file_read_bytes) {
-//                int prog=(int)((file_read_bytes * 100) / file_size);
-                SyncThread.showProgressMsg(stwa, sti.getSyncTaskName(), file_name + " " +
-                        stwa.appContext.getString(R.string.msgs_mirror_task_file_copying,(file_read_bytes * 100) / file_size));
+                long current_time = System.currentTimeMillis();
+                long time_diff = current_time - last_update_time;
+
+                // Only update notification every second to avoid performance issues
+                if (time_diff >= speed_update_interval) {
+                    long bytes_diff = file_read_bytes - last_update_bytes;
+                    String transfer_rate = SyncThread.calTransferRate(bytes_diff, time_diff);
+
+                    String progress_msg = file_name + " " +
+                        stwa.appContext.getString(R.string.msgs_mirror_task_file_copying,
+                            (file_read_bytes * 100) / file_size) +
+                        "\nTransfer: " + transfer_rate;
+
+                    SyncThread.showProgressMsg(stwa, sti.getSyncTaskName(), progress_msg);
+
+                    last_update_time = current_time;
+                    last_update_bytes = file_read_bytes;
+                }
             }
             if (SyncThread.isTaskCancelled(true, stwa.gp.syncThreadCtrl)) {
                 ifs.close();
